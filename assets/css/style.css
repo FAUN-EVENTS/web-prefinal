@@ -1,0 +1,186 @@
+/**
+*	FONTS
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+/**
+*   GENERAL
+*/
+
+:root {
+	color: #ffffff;
+	font-family: 'Pixelify Sans';
+}
+
+a:visited, a:link {
+	color: #FFFFFF;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #3D253B;
+}
+
+#chevre {
+	position: absolute;
+	z-index: 9;
+	left: 210px;
+	top: 210px;
+	height: 40px;
+	transition: transform 0s;
+}
+
+.bgprop-5 {
+	position: absolute;
+	z-index: 5;
+}
+.TL {
+	top: 0;
+	left: 0;
+}
+.TR {
+	top: 0;
+	right:0;
+}
+.BL {
+	bottom:0;
+	left:0;
+}
+.BR {
+	bottom: 0;
+	right:0;
+}
+
+#logo {
+	top: calc(40% - 50px);
+	width: 100%;
+	max-width: 100%;
+	height: 200px;
+	opacity: .4; 
+	background-image: url("../../assets/images/lmd-logo.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	z-index: 5;
+}
+#infos {
+	bottom: 120px;
+	width: 50%;
+	left: 25%;
+	opacity: .8;
+	text-align: center;
+	font-size: 2.5cap;
+	line-height: 1.5cap;
+	z-index: 10;
+	opacity: .8;
+}
+#game-infos {
+	bottom: 150px;
+	min-width: max-content;
+	opacity: .6; 
+	text-align: center;
+	display: flex;
+	justify-content: right;
+}
+
+#game-infos>span {
+	margin-right: 150px;
+}
+
+.bgprop-1 {
+	position: absolute;
+	z-index: 1;
+}
+#top-motv {
+	top: 0;
+	width: 100%;
+	height: 144px;
+	background-image: url("../..//assets/bg/bg-top-motif.png");
+	background-repeat: repeat-x;
+	background-size: contain;
+}
+#bottom-motv {
+	bottom: 0;
+	width: 100%;
+	height: 144px;
+	background-image: url("../../assets/bg/bg-bottom-motif.png");
+	background-repeat: repeat-x;
+	background-size: contain;
+}
+#left-motv {
+	left: 0;
+	width: 144px;
+	height: 100%;
+	background-image: url("../../assets/bg/bg-left-motif.png");
+	background-repeat: repeat-y;
+	background-size: contain;
+}
+#right-motv {
+	right: 0;
+	width: 140px;
+	height: 100%;
+	background-image: url("../../assets/bg/bg-right-motif.png");
+	background-repeat: repeat-y;
+	background-size: contain;
+}
+
+#restartBtn {
+	margin-top: 20px;
+	min-height: 60px;
+	min-width: 200px;
+	background-image: url("../../assets/images/btn-reset.png");
+	background-size: cover;
+    border-color: #31261F !important;
+    border-radius: 4px !important;
+    border-width: 2px !important;
+    box-shadow: 2px 2px #31261F !important;
+	font-family: 'Pixelify Sans', sans-serif;
+	font-size: 20px;
+	z-index: 6;
+}
+
+#restartBtn:hover {
+	transform: translateY(-5px);
+    color: #FFFFFF;
+    box-shadow: .0rem .2rem .4rem #777;
+    pointer-events: visible;
+    position: relative;
+    z-index: 0;
+    visibility: visible;
+    float: none;
+	cursor: pointer;
+}
+
+.levelCleared {
+	font-family: 'Pixelify Sans', sans-serif;
+	font-size: 11rem;
+	font-weight: 700;
+	line-height: 70px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #ffffff;
+	top: 70%;
+	width: 100%;
+	z-index: 10;
+	position: absolute;
+	animation: 3s levelCleared infinite;
+	display: none;
+}
+
+@media (width <= 768px) {
+	#infos {
+		top: 50%;
+	}
+}
+
+@media (700px <= width <= 1400px) {
+	#infos {
+		top: 50%;
+		width: 70%;
+		left: 15%;
+	}
+}

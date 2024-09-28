@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Fauntastic 5 - LMD</title>
+		<link href="assets/css/style.css" rel="stylesheet" />
+		<link rel="icon" type="image/png" href="assets/images/lati.gif" />
+        <style>
+            @keyframes damage {
+                25% {
+                }
+                50% {
+                    filter: drop-shadow(0 0 0.75rem red);
+                }
+            }
+
+            @keyframes heavenize {
+                0% {opacity: 1;}
+                100% {opacity: 0;} 
+            }
+
+            @keyframes levelCleared {
+                0% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <img id="lati" />
+
+        <img class="bgprop-5 TL" src="assets/bg/bg-top-left.png"/>
+		<img class="bgprop-5 TR" src="assets/bg/bg-top-right.png"/>
+		<img class="bgprop-5 BL" src="assets/bg/bg-bottom-left.png"/>
+		<img class="bgprop-5 BR" src="assets/bg/bg-bottom-right.png"/>
+		
+		<div id="logo" class="bgprop-5"></div>
+        
+        <div id="infos" class="bgprop-5">
+            <p>Dates: Du 18 au 22 Avril 2025</p>
+            <p>Lieu: <a href="https://www.google.com/maps/place/Novotel+Lyon+Bron+Meeting+%26+Events/@45.7247313,4.9266792,17z/data=!4m9!3m8!1s0x47f4c16094f2c3b9:0x6db16a864d3044b5!5m2!4m1!1i2!8m2!3d45.7247276!4d4.9292541!16s%2Fg%2F1wn_5g4t?entry=ttu&g_ep=EgoyMDI0MDkyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Novotel Lyon Bron Eurexpo</a></p>
+            <p>Registration: 30 Novembre 2024</p>
+            <p>Plus d'informations en Novembre ! 
+                <a href="https://x.com/FauntasticCon" target="_blank">Twitter/X</a> |
+                <a href=" https://bsky.app/profile/fauntasticcon.bsky.social" target="_blank">BlueSky</a> |
+                <a href="https://t.me/FauntasticCon" target="_blank">Telegram</a></p>
+        </div>
+		<div id="game-infos" class="bgprop-5" style="color: #ffffff; width: 100%">
+            <span>
+                Move the chevre with your arrow keys<br>
+                Fight with space <br>
+                <button id="restartBtn" onclick="resetGame()"> Restart ?</button>
+            </span>
+		</div>
+        <div id="levelCleared" class="levelCleared">
+            <span>Level 0 Cleared!</span>
+        </div>
+		
+		<div id="top-motv" class="bgprop-1"></div>
+		<div id="left-motv" class="bgprop-1"></div>
+		<div id="right-motv" class="bgprop-1"></div>
+		<div id="bottom-motv" class="bgprop-1"></div>
+		
+        <script src="script.js"></script>
+        <script>
+            window.onresize = Game.resize;
+        </script>
+    </body>
+</html>
