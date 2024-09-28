@@ -357,7 +357,7 @@ const Game = {
                 }
             }
 
-            if(heavenized === this.ingame.length) {
+            if(heavenized === this.ingame.length && localStorage.getItem("lmd.levelCleared") === null) {
                 document.dispatchEvent(new CustomEvent("levelCleared", {detail: {sound: true}}));
             }
         },
