@@ -133,8 +133,10 @@ const Game = {
         return restored;
     },
     reset: function() {
-        while(localStorage.length > 0) {
-            let key = localStorage.key(0);
+
+        const max_len = localStorage.length - 1;
+        for(let i = max_len; i >= 0; i--) {
+            let key = localStorage.key(i);
             if (key.indexOf("lmd.") !== -1) {
                 localStorage.removeItem(key);
             }
